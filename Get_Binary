@@ -1,0 +1,15 @@
+    public static String Get_binary(float num){
+        String binary = "";
+        while (num != 0){
+            num /= 2;
+            if (is_Decimal(num) == true){
+                binary += "1";
+                num = Get_whole(num);
+                }
+                else{
+                    binary += "0";
+                    }
+            }
+            return reverse(binary);
+        }
+        
