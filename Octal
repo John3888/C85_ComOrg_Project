@@ -1,0 +1,9 @@
+public static String Get_Octal(float num){
+    String Octal= "";
+    while (num != 0 ){
+        num /= 8;
+            Octal += String.valueOf(Math.round(8.0 * Get_decimal_val(num)));
+            num = Get_whole(num);
+        }
+        return reverse(Octal);
+    }
