@@ -1,0 +1,8 @@
+public static float Get_decimal_val(float num){
+    return num % 1;
+    }
+    
+    
+public static float Get_whole(float num){
+    return num - Get_decimal_val(num);
+}
