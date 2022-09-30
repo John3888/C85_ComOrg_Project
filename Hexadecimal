@@ -1,0 +1,31 @@
+ public static String Get_Hexadecimal(float num){
+        String Hexadecimal= "";
+        while(num != 0){
+            num /= 16;
+            if (Get_decimal_val(num) * 16 > 9){
+                if(Get_decimal_val(num)*16 == 10){
+                    Hexadecimal +="A";
+                }
+                else if(Get_decimal_val(num)*16 == 11){
+                    Hexadecimal +="B";
+                }
+                else if(Get_decimal_val(num)*16 == 12){
+                    Hexadecimal +="C";
+                }
+                else if(Get_decimal_val(num)*16 == 13){
+                    Hexadecimal +="D";
+                }
+                else if(Get_decimal_val(num)*16 == 14){
+                    Hexadecimal +="E";
+                }
+                else{
+                    Hexadecimal +="F";
+                }
+            }
+            else {
+                Hexadecimal += String.valueOf(Math.round(16.0 * Get_decimal_val(num)));
+            }
+            num = Get_whole(num);
+        }
+        return reverse(Hexadecimal);
+    }
